@@ -75,7 +75,7 @@ main {
 
 .left-bar {
   position: fixed;
-  height: 100vh;
+  height: 80vh;
   bottom: 0;
   width: 10%;
   display: flex;
@@ -107,7 +107,7 @@ main {
 
 .right-bar {
   position: fixed;
-  height: 100vh;
+  height: 80vh;
   width: 10%;
   right: 0;
   bottom: 0;
@@ -116,11 +116,6 @@ main {
   justify-content: flex-end;
   align-items: center;
   gap: 20px;
-}
-.right-bar .email {
-  writing-mode: vertical-rl;
-  letter-spacing: 1.5px;
-  cursor: pointer;
 }
 
 .vl {
@@ -142,6 +137,7 @@ main {
   display: flex;
   align-items: center;
   justify-self: center;
+  gap: 10px;
   padding: 10px;
   border: 1px solid rgb(12, 247, 12);
   border-top-right-radius: 20px;
@@ -161,6 +157,38 @@ main {
 .udemy-img {
   height: 80%;
   width: 50%;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  writing-mode: vertical-rl;
+  letter-spacing: 1.5px;
+}
+
+.tooltip:hover {
+  cursor: pointer;
+  color: rgb(12, 247, 12);
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  writing-mode: horizontal-tb;
+  /* Position the tooltip */
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
 
 /*# sourceMappingURL=index.css.map */

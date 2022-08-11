@@ -25,7 +25,9 @@
           <li class="nav-element">Education</li>
           <li class="nav-element">Work</li>
           <li class="nav-element">Contact</li>
-          <button class="resume-btn">Resume</button>
+          <a href="./assets/resume/MusaDabevResume.pdf" target="_blank"
+            ><button class="resume-btn">Resume</button>
+          </a>
         </ol>
       </nav>
     </header>
@@ -55,7 +57,9 @@
         </div>
 
         <article class="master-degree">
-          <h3 class="uni-heading">University of Plovdiv "Paisii Hilendarski"</h3>
+          <h3 class="uni-heading">
+            University of Plovdiv "Paisii Hilendarski"
+          </h3>
           <p>Master's degree</p>
           <p class="major">
             "Software Technology with Specialization in Graphical Environments
@@ -65,7 +69,9 @@
         </article>
 
         <article class="bachelor-degree">
-          <h3 class="uni-heading">University of Plovdiv "Paisii Hilendarski"</h3>
+          <h3 class="uni-heading">
+            University of Plovdiv "Paisii Hilendarski"
+          </h3>
           <p>Bachelor's degree</p>
           <p class="major">"History and Foreign Language – English"</p>
           <p class="edu-duration"><i>2017 - 2021</i></p>
@@ -75,17 +81,28 @@
           <div class="usemy-details">
             <h3 class="udemy-heading">Udemy</h3>
             <p>Certificate</p>
-            <p class="major">"React – The Complete Guide (incl Hooks, React Router,
-                Redux)"</p>
+            <p class="major">
+              "React – The Complete Guide (incl Hooks, React Router, Redux)"
+            </p>
             <p class="edu-duration"><i>2017 - 2021</i></p>
           </div>
-          <img class="udemy-img" src="./assets/pictures/react-ceritficate.jpg" alt="udemy-cerificate">
+          <img
+            class="udemy-img"
+            src="./assets/pictures/react-ceritficate.jpg"
+            alt="udemy-cerificate"
+          />
         </article>
       </section>
     </main>
     <aside class="right-bar">
-       <p class="email">musadabev19@gmail.com</p>
-        <div class="vl"></div>
-      </aside>
+      <div class="tooltip">
+        <div class="email" id="email">musadabev19@gmail.com</div>
+        <span class="tooltiptext" id="tooltiptext">Copy</span>
+      </div>
+
+      <div class="vl"></div>
+    </aside>
+
+    <script src="./scripts/script.js"></script>
   </body>
 </html>
