@@ -69,6 +69,10 @@ main {
   line-height: 50px;
 }
 
+.intro-section {
+  height: 100vh;
+}
+
 .intro-text {
   max-width: 540px;
 }

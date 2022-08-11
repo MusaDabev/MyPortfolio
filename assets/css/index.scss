@@ -76,6 +76,10 @@ main {
   line-height: 50px;
 }
 
+.intro-section {
+    height: 100vh;
+}
+
 .intro-text {
     max-width: 540px;
 }
@@ -102,4 +106,8 @@ aside {
     transform: rotate(20deg);
     transition: 0.5s;
   }
+}
+
+.education-section {
+    
 }
