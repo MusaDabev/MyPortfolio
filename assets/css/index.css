@@ -1,3 +1,58 @@
+body {
+  background-color: #0a192f;
+  color: white;
+  font-size: 16px;
+  font-family: "Quicksand", sans-serif;
+}
 
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin-left: 30px;
+}
+.logo .fa-solid.fa-m {
+  color: rgb(12, 247, 12);
+}
+
+ol {
+  list-style: none;
+  counter-reset: li;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-right: 40px;
+}
+ol li::before {
+  content: counter(li) ".";
+  color: rgb(12, 247, 12);
+  display: inline-block;
+  width: 1.2em;
+  margin-left: -1em;
+}
+ol li {
+  cursor: pointer;
+  counter-increment: li;
+}
+ol li:hover {
+  color: rgb(12, 247, 12);
+}
+
+.resume-btn {
+  width: 70px;
+  height: 35px;
+  background-color: #0a192f;
+  color: rgb(12, 247, 12);
+  border: 2px groove rgb(12, 247, 12);
+  border-radius: 3px;
+}
+
+.resume-btn:hover {
+  cursor: pointer;
+  background-color: rgb(6, 60, 6);
+}
 
 /*# sourceMappingURL=index.css.map */
