@@ -76,29 +76,20 @@ main {
   line-height: 50px;
 }
 
-.intro-section {
-    height: 100vh;
-}
-
 .intro-text {
-    max-width: 540px;
+  max-width: 540px;
 }
 
-aside {
+.left-bar {
   position: fixed;
   height: 100vh;
+  bottom: 0;
   width: 10%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   gap: 20px;
-
-  .vl {
-    border-left: 6px solid $secondory-color;
-    height: 300px;
-    margin-left: -3px;
-  }
 
   .fa-brands:hover {
     color: $secondory-color;
@@ -109,5 +100,76 @@ aside {
 }
 
 .education-section {
-    
+  margin-top: 10px;
+}
+
+.edu-heading-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  .education-heading {
+  }
+
+  .horizontal-line {
+    border-bottom: 1px solid $secondory-color;
+    width: 100%;
+  }
+}
+
+.right-bar {
+  position: fixed;
+  height: 100vh;
+  width: 10%;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+
+  .email {
+    writing-mode: vertical-rl;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+  }
+}
+
+.vl {
+  border-left: 4px solid $secondory-color;
+  height: 170px;
+  margin-left: -3px;
+}
+.master-degree,
+.bachelor-degree {
+  border: 1px solid $secondory-color;
+  padding: 10px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  margin-top: 30px;
+}
+
+.udemy-certificate {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  padding: 10px;
+  border: 1px solid $secondory-color;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  margin-top: 30px;
+}
+
+.udemy-heading,
+.uni-heading {
+  font-size: 2rem;
+}
+
+.major {
+  font-weight: 500;
+}
+
+.udemy-img {
+  height: 80%;
+  width: 50%;
 }
