@@ -4,7 +4,7 @@ html {
 
 body {
   background-color: #0a192f;
-  color: white;
+  color: rgb(204, 214, 246);
   font-size: 16px;
   font-family: "Quicksand", sans-serif;
 }
@@ -19,6 +19,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   background-color: #0a192f;
+  box-shadow: 0 8px 6px -6px black;
 }
 
 .logo {
@@ -74,6 +75,10 @@ section {
   min-height: 100vh;
 }
 
+.intro-section {
+  margin-top: 70px;
+}
+
 .intro-section .colored-intro-p {
   color: rgb(12, 247, 12);
 }
@@ -114,12 +119,13 @@ main {
   margin-top: 10px;
 }
 
-.edu-heading-container {
+.edu-heading-container, .contact-heading-container {
   display: flex;
   align-items: center;
   gap: 10px;
+  width: 100%;
 }
-.edu-heading-container .horizontal-line {
+.edu-heading-container .horizontal-line, .contact-heading-container .horizontal-line {
   border-bottom: 1px solid rgb(12, 247, 12);
   width: 100%;
 }
@@ -232,6 +238,32 @@ main {
 .redux-logo {
   height: 16px;
   width: 16px;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-btn {
+  width: 120px;
+  height: 50px;
+  padding: 0;
+  background-color: #0a192f;
+  color: rgb(12, 247, 12);
+  border: 2px groove rgb(12, 247, 12);
+  border-radius: 3px;
+}
+.contact-btn a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.contact-btn:hover {
+  cursor: pointer;
+  background-color: rgb(6, 60, 6);
 }
 
 /*# sourceMappingURL=index.css.map */

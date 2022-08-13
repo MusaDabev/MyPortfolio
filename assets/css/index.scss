@@ -1,5 +1,6 @@
 $main-color: #0a192f;
 $secondory-color: rgb(12, 247, 12);
+$text-color: rgb(204,214,246);
 
 html {
   scroll-behavior: smooth;
@@ -7,7 +8,7 @@ html {
 
 body {
   background-color: $main-color;
-  color: white;
+  color: $text-color;
   font-size: 16px;
   font-family: "Quicksand", sans-serif;
 }
@@ -15,12 +16,13 @@ body {
 nav {
   position: fixed; 
   top: 0; 
-  width: 100%; 
+  width: 100%;
   transition: top 0.3s; /* Transition effect when sliding down (and up) */
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: $main-color;
+  box-shadow: 0 8px 6px -6px black;
 }
 
 .logo {
@@ -80,6 +82,10 @@ section {
   min-height: 100vh;
 }
 
+.intro-section {
+    margin-top: 70px;
+}
+
 .intro-section .colored-intro-p {
   color: $secondory-color;
 }
@@ -121,18 +127,19 @@ main {
   margin-top: 10px;
 }
 
-.edu-heading-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  .education-heading {
-  }
-
-  .horizontal-line {
-    border-bottom: 1px solid $secondory-color;
+.edu-heading-container, .contact-heading-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     width: 100%;
-  }
+
+    .horizontal-line {
+        border-bottom: 1px solid $secondory-color;
+        width: 100%;
+      }
 }
+
+
 
 .right-bar {
   position: fixed;
@@ -185,6 +192,7 @@ main {
 .udemy-img {
   height: 80%;
   width: 50%;
+
 }
 
 // Tooltip
@@ -244,3 +252,36 @@ main {
   height: 16px;
   width: 16px;
 }
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.contact-btn {
+    width: 120px;
+    height: 50px;
+    padding: 0;
+    background-color: $main-color;
+    color: $secondory-color;
+    border: 2px groove $secondory-color;
+    border-radius: 3px;
+
+  a  {
+        color: inherit;
+        text-decoration: inherit;
+    }
+}
+
+.contact-btn:hover {
+    cursor: pointer;
+    background-color: rgb(6, 60, 6);
+  }
+
+
+
+
