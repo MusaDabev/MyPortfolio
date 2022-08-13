@@ -1,6 +1,10 @@
 $main-color: #0a192f;
 $secondory-color: rgb(12, 247, 12);
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: $main-color;
   color: white;
@@ -9,9 +13,14 @@ body {
 }
 
 nav {
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: $main-color;
 }
 
 .logo {
@@ -48,6 +57,11 @@ ol {
   }
 }
 
+.nav-elements a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
 .resume-btn {
   width: 70px;
   height: 35px;
@@ -60,6 +74,10 @@ ol {
 .resume-btn:hover {
   cursor: pointer;
   background-color: rgb(6, 60, 6);
+}
+
+section {
+  min-height: 100vh;
 }
 
 .intro-section .colored-intro-p {
@@ -201,4 +219,28 @@ main {
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
+}
+
+.md-shop,
+.rest-countries {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.md-shop-screenshot,
+.rest-countries-screenshot {
+  width: 50%;
+}
+
+.md-shop-desc {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.redux-logo {
+  height: 16px;
+  width: 16px;
 }

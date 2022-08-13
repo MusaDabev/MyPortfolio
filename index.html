@@ -18,13 +18,13 @@
   </head>
   <body>
     <header>
-      <nav>
+      <nav id="navbar">
         <div class="logo"><i class="fa-solid fa-m fa-2xl"></i></div>
         <ol class="nav-elements">
-          <li class="nav-element">About</li>
-          <li class="nav-element">Education</li>
-          <li class="nav-element">Work</li>
-          <li class="nav-element">Contact</li>
+          <li class="nav-element"><a href="#intro-section">About</a></li>
+          <li class="nav-element"><a href="#education-section">Education</a></li>
+          <li class="nav-element"><a href="#projects">Work</a></li>
+          <li class="nav-element"><a href="">Contact</a></li>
           <a href="./assets/resume/MusaDabevResume.pdf" target="_blank"
             ><button class="resume-btn">Resume</button>
           </a>
@@ -38,7 +38,7 @@
       <div class="vl"></div>
     </aside>
     <main>
-      <section class="intro-section">
+      <section class="intro-section" id="intro-section">
         <p class="colored-intro-p">Hi, my name is</p>
         <h1>Musa Dabev</h1>
         <h1>I build things for the web!</h1>
@@ -50,7 +50,7 @@
           your company.
         </p>
       </section>
-      <section class="education-section">
+      <section class="education-section" id="education-section">
         <div class="edu-heading-container">
           <h2 class="education-heading">Education</h2>
           <div class="horizontal-line"></div>
@@ -90,6 +90,65 @@
             class="udemy-img"
             src="./assets/pictures/react-ceritficate.jpg"
             alt="udemy-cerificate"
+          />
+        </article>
+      </section>
+
+      <section class="projects" id="projects">
+        <article class="md-shop">
+          <img
+            class="md-shop-screenshot"
+            src="./assets/pictures/screenshots/homepage1.jpg"
+            alt="md shop screenshot"
+          />
+          <div class="md-shop-details">
+            <h2>MD shop</h2>
+            <p class="md-shop-desc">
+              Online shop where you can browse different categories,add products
+              to favourites, add products to cart, order products, make
+              payments. Also, if you are registered you can managed your
+              profile. The admin can creates/deletes/edits products, categories,
+              users and can review a sales history;
+            </p>
+            <p class="md-shop-teck">
+              <i class="fa-brands fa-html5"></i> HTML
+              <i class="fa-brands fa-css3"></i> CSS
+              <i class="fa-brands fa-react"></i> React Material UI
+              <i class="fa-brands fa-node"></i> Node.js
+              <img src="./assets/pictures/logos/icons8-mongodb-16.png" alt="" />
+              MongoDB
+              <img
+                class="redux-logo"
+                src="./assets/pictures/logos/5848309bcef1014c0b5e4a9a.png"
+                alt=""
+              />
+              Redux Toolkit
+              <img src="./assets/pictures/logos/stripe.png" alt="" /> Stripe
+            </p>
+          </div>
+        </article>
+
+        <article class="rest-countries">
+          <div class="rest-countries-details">
+            <h2>REST-Countries-API</h2>
+            <p class="rest-countries-desc">
+              REST Countries API with Color theme Switcher User can be able to
+              do following: On the homepage, you can see all of the countries
+              that the API supports. Using an input field, look for a country.
+              Countries can be filtered by region. On a separate page, click on
+              a country to see more detailed information. Toggle between light
+              and dark colour schemes.
+            </p>
+            <p class="rest-countries-teck">
+              <i class="fa-brands fa-html5"></i> HTML
+              <i class="fa-brands fa-css3"></i> CSS modules
+              <i class="fa-brands fa-react"></i> React
+            </p>
+          </div>
+          <img
+            class="rest-countries-screenshot"
+            src="./assets/pictures/screenshots/rest-countries.png"
+            alt="countries screenshot"
           />
         </article>
       </section>
