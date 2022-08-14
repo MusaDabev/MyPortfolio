@@ -13,6 +13,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
+  height: 70px;
   transition: top 0.3s;
   /* Transition effect when sliding down (and up) */
   display: flex;
@@ -71,6 +72,106 @@ ol li:hover {
   background-color: rgb(6, 60, 6);
 }
 
+label .menu {
+  position: absolute;
+  right: 0;
+  top: 0px;
+  z-index: 2;
+  width: 60px;
+  height: 60px;
+  background: #0a192f;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff;
+  cursor: pointer;
+}
+
+label .hamburger {
+  position: absolute;
+  top: 35px;
+  left: 10px;
+  width: 30px;
+  height: 2px;
+  background: #69d2e7;
+  display: block;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+label .hamburger:after,
+label .hamburger:before {
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #69d2e7;
+}
+
+label .hamburger:before {
+  top: -10px;
+}
+
+label .hamburger:after {
+  bottom: -10px;
+}
+
+label input {
+  display: none;
+}
+
+label input:checked + .menu .hamburger {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+label input:checked + .menu .hamburger:after {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  bottom: 0;
+}
+
+label input:checked + .menu .hamburger:before {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  top: 0;
+}
+
+label input:checked + .menu + ol {
+  opacity: 1;
+}
+
+label ol {
+  z-index: 4;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0;
+  width: 200px;
+  top: 200px;
+  right: -110px;
+  margin-right: 0;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  -webkit-transition: 0.25s 0s ease-in-out;
+  transition: 0.25s 0s ease-in-out;
+  background-color: #112240;
+}
+
+label a {
+  margin-bottom: 1em;
+  display: block;
+  color: #f38630;
+  text-decoration: none;
+}
+
 section {
   min-height: 100vh;
 }
@@ -119,13 +220,15 @@ main {
   margin-top: 10px;
 }
 
-.edu-heading-container, .contact-heading-container {
+.edu-heading-container,
+.contact-heading-container {
   display: flex;
   align-items: center;
   gap: 10px;
   width: 100%;
 }
-.edu-heading-container .horizontal-line, .contact-heading-container .horizontal-line {
+.edu-heading-container .horizontal-line,
+.contact-heading-container .horizontal-line {
   border-bottom: 1px solid rgb(12, 247, 12);
   width: 100%;
 }
@@ -264,6 +367,17 @@ main {
 .contact-btn:hover {
   cursor: pointer;
   background-color: rgb(6, 60, 6);
+}
+
+@media (min-width: 680px) {
+  label .menu {
+    display: none;
+  }
+}
+@media (max-width: 680px) {
+  nav .nav-elements {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,6 +1,6 @@
 $main-color: #0a192f;
 $secondory-color: rgb(12, 247, 12);
-$text-color: rgb(204,214,246);
+$text-color: rgb(204, 214, 246);
 
 html {
   scroll-behavior: smooth;
@@ -14,9 +14,10 @@ body {
 }
 
 nav {
-  position: fixed; 
-  top: 0; 
+  position: fixed;
+  top: 0;
   width: 100%;
+  height: 70px;
   transition: top 0.3s; /* Transition effect when sliding down (and up) */
   display: flex;
   justify-content: space-between;
@@ -78,12 +79,115 @@ ol {
   background-color: rgb(6, 60, 6);
 }
 
+// Hamburger menu start
+
+label .menu {
+  position: absolute;
+  right: 0;
+  top: 0px;
+  z-index: 2;
+  width: 60px;
+  height: 60px;
+  background: $main-color;
+  // border-radius: 50% 50% 50% 50%;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff;
+  cursor: pointer;
+}
+
+label .hamburger {
+  position: absolute;
+  top: 35px;
+  left: 10px;
+  width: 30px;
+  height: 2px;
+  background: #69d2e7;
+  display: block;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+label .hamburger:after,
+label .hamburger:before {
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #69d2e7;
+}
+
+label .hamburger:before {
+  top: -10px;
+}
+
+label .hamburger:after {
+  bottom: -10px;
+}
+
+label input {
+  display: none;
+}
+
+label input:checked + .menu .hamburger {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+label input:checked + .menu .hamburger:after {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  bottom: 0;
+}
+
+label input:checked + .menu .hamburger:before {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  top: 0;
+}
+
+label input:checked + .menu + ol {
+  opacity: 1;
+}
+
+label ol {
+  z-index: 4;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0;
+  width: 200px;
+  top: 200px;
+  right: -110px;
+  margin-right: 0;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  -webkit-transition: 0.25s 0s ease-in-out;
+  transition: 0.25s 0s ease-in-out;
+  background-color: #112240;
+}
+
+label a {
+  margin-bottom: 1em;
+  display: block;
+  color: #f38630;
+  text-decoration: none;
+}
+
 section {
   min-height: 100vh;
 }
 
 .intro-section {
-    margin-top: 70px;
+  margin-top: 70px;
 }
 
 .intro-section .colored-intro-p {
@@ -127,19 +231,18 @@ main {
   margin-top: 10px;
 }
 
-.edu-heading-container, .contact-heading-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.edu-heading-container,
+.contact-heading-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+
+  .horizontal-line {
+    border-bottom: 1px solid $secondory-color;
     width: 100%;
-
-    .horizontal-line {
-        border-bottom: 1px solid $secondory-color;
-        width: 100%;
-      }
+  }
 }
-
-
 
 .right-bar {
   position: fixed;
@@ -192,7 +295,6 @@ main {
 .udemy-img {
   height: 80%;
   width: 50%;
-
 }
 
 // Tooltip
@@ -254,34 +356,40 @@ main {
 }
 
 .contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-
-
 .contact-btn {
-    width: 120px;
-    height: 50px;
-    padding: 0;
-    background-color: $main-color;
-    color: $secondory-color;
-    border: 2px groove $secondory-color;
-    border-radius: 3px;
+  width: 120px;
+  height: 50px;
+  padding: 0;
+  background-color: $main-color;
+  color: $secondory-color;
+  border: 2px groove $secondory-color;
+  border-radius: 3px;
 
-  a  {
-        color: inherit;
-        text-decoration: inherit;
-    }
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
 }
 
 .contact-btn:hover {
-    cursor: pointer;
-    background-color: rgb(6, 60, 6);
+  cursor: pointer;
+  background-color: rgb(6, 60, 6);
+}
+
+@media (min-width: 680px) {
+  label .menu {
+    display: none;
   }
+}
 
-
-
-
+@media (max-width: 680px) {
+  nav .nav-elements {
+    display: none;
+  }
+}
