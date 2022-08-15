@@ -168,7 +168,7 @@ label ol {
 label a {
   margin-bottom: 1em;
   display: block;
-  color: #f38630;
+  color: rgb(204, 214, 246);
   text-decoration: none;
 }
 
@@ -254,10 +254,10 @@ main {
 
 .master-degree,
 .bachelor-degree {
-  border: 1px solid rgb(12, 247, 12);
   padding: 10px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-width: 3px;
+  border-style: solid;
+  border-image: linear-gradient(to bottom, rgb(12, 247, 12), rgba(0, 0, 0, 0)) 1 100%;
   margin-top: 30px;
 }
 
@@ -267,9 +267,9 @@ main {
   justify-self: center;
   gap: 10px;
   padding: 10px;
-  border: 1px solid rgb(12, 247, 12);
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-width: 3px;
+  border-style: solid;
+  border-image: linear-gradient(to bottom, rgb(12, 247, 12), rgba(0, 0, 0, 0)) 1 100%;
   margin-top: 30px;
 }
 

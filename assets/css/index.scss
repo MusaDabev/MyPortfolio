@@ -2,6 +2,7 @@ $main-color: #0a192f;
 $secondory-color: rgb(12, 247, 12);
 $text-color: rgb(204, 214, 246);
 
+
 html {
   scroll-behavior: smooth;
 }
@@ -89,7 +90,6 @@ label .menu {
   width: 60px;
   height: 60px;
   background: $main-color;
-  // border-radius: 50% 50% 50% 50%;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
   box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff;
@@ -173,12 +173,13 @@ label ol {
   -webkit-transition: 0.25s 0s ease-in-out;
   transition: 0.25s 0s ease-in-out;
   background-color: #112240;
+  
 }
 
 label a {
   margin-bottom: 1em;
   display: block;
-  color: #f38630;
+  color: $text-color;
   text-decoration: none;
 }
 
@@ -264,10 +265,15 @@ main {
 }
 .master-degree,
 .bachelor-degree {
-  border: 1px solid $secondory-color;
   padding: 10px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-width: 3px;
+  border-style: solid;
+  border-image: 
+    linear-gradient(
+      to bottom, 
+        $secondory-color, 
+      rgba(0, 0, 0, 0)
+    ) 1 100%;
   margin-top: 30px;
 }
 
@@ -277,9 +283,14 @@ main {
   justify-self: center;
   gap: 10px;
   padding: 10px;
-  border: 1px solid $secondory-color;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-width: 3px;
+  border-style: solid;
+  border-image: 
+    linear-gradient(
+      to bottom, 
+        $secondory-color, 
+      rgba(0, 0, 0, 0)
+    ) 1 100%;
   margin-top: 30px;
 }
 
@@ -338,6 +349,7 @@ main {
   align-items: center;
   gap: 10px;
   margin-top: 15px;
+  
 }
 
 .md-shop-screenshot,
